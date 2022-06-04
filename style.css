@@ -1,0 +1,374 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #333;
+}
+
+.container
+{
+    position: relative;
+    min-width: 300px;
+    min-height: 400px;
+    background: #333;
+    padding: 40px 30px 30px;
+    border-radius: 20px;
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+    10px 10px 70px rgba(0, 0, 0, 0.25),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.5);
+    
+}
+
+.calculator 
+{
+    position: relative;
+    display: grid;
+}
+
+.calculator .value
+{
+    position: relative;
+    grid-column: span 4;
+    height: 100px;
+    left: 10px;
+    width: calc(100% - 20px);
+    border: none;
+    outline: none;
+    background: #b2e5f1;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75);
+    text-align: right;
+    padding: 10px;
+    font-size: 2em;
+
+}
+
+.calculator span
+{
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 80px;
+    height: 80px;
+    margin: 8px;
+    background: linear-gradient(180deg,#2f2f2f,#3f3f3f);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+    inset 0 -8px 8px rgba(0, 0, 0, 0.25),
+    0 0 0 2px rgba(0, 0, 0, 0.75),
+    10px 20px 25px rgba(0,0,0,0.4);
+    color: #fff;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: 10px;
+}
+
+.calculator span::before
+{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    background: linear-gradient(90deg,#2d2d2d,#4d4d4d);
+    border-radius: 10px;
+    box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1),
+    10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid #0004;
+    border-bottom: 1px solid #0004;
+    border-top: 1px solid #0009;
+
+}
+
+.calculator span:active
+{
+    filter: brightness(1.5);
+}
+
+
+.calculator span i
+{
+    position: relative;
+    font-style: normal;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.calculator .clear
+{
+   grid-column: span 2;
+   width: 175px;
+   background: rgb(255, 157, 0);
+}
+
+.calculator .clear::before
+{
+    background: linear-gradient(90deg, #f5a836,#ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4;  
+}
+
+.calculator .plus 
+{
+    background: rgb(255, 157, 0);
+    grid-row: span 2;
+    height: 175px;
+}
+
+.calculator .plus::before
+{
+    background: linear-gradient(90deg, #ffb637,#ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4;  
+}
+
+ .calculator .equal
+{
+    background: rgb(255, 157, 0);
+}
+
+.calculator .equal::before
+{
+    background: linear-gradient(90deg, #ffb637,#ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4; 
+} 
+
+.calculator .one 
+{
+    background: rgb(57, 63, 72);
+
+}
+
+.calculator .one::before
+{
+    background: linear-gradient(90deg, #617086,#ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4; 
+
+}
+
+.calculator .two 
+{
+    background: rgb(57, 63, 72);
+
+}
+
+.calculator .two::before
+{
+    background: linear-gradient(90deg, #617086,#ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4; 
+
+}
+
+.calculator .three 
+{
+    background: rgb(57, 63, 72);
+
+}
+
+.calculator .three::before
+{
+    background: linear-gradient(90deg, #617086,#ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4; 
+}
+
+.calculator .four 
+{
+    background: rgb(57, 63, 72);
+
+}
+
+.calculator .four::before
+{
+    background: linear-gradient(90deg, #617086,#ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4; 
+}
+
+.calculator .five 
+{
+    background: rgb(57, 63, 72);
+
+}
+
+.calculator .five::before
+{
+    background: linear-gradient(90deg, #617086,#ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4; 
+}
+
+.calculator .six 
+{
+    background: rgb(57, 63, 72);
+
+}
+
+.calculator .six::before
+{
+    background: linear-gradient(90deg, #617086,#ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4; 
+}
+
+.calculator .seven
+{
+    background: rgb(57, 63, 72);
+
+}
+
+.calculator .seven::before
+{
+    background: linear-gradient(90deg, #617086,#ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4; 
+}
+
+.calculator .eight
+{
+    background: rgb(57, 63, 72);
+
+}
+
+.calculator .eight::before
+{
+    background: linear-gradient(90deg, #617086,#ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4; 
+}
+
+.calculator .eight
+{
+    background: rgb(57, 63, 72);
+
+}
+
+.calculator .eight::before
+{
+    background: linear-gradient(90deg, #617086,#ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4; 
+}
+
+.calculator .nine
+{
+    background: rgb(57, 63, 72);
+
+}
+
+.calculator .nine::before
+{
+    background: linear-gradient(90deg, #617086,#ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4; 
+}
+
+.calculator .zero
+{
+    background: rgb(57, 63, 72);
+
+}
+
+.calculator .zero::before
+{
+    background: linear-gradient(90deg, #617086,#ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4; 
+}
+
+.calculator .zero_zero
+{
+    background: rgb(57, 63, 72);
+
+}
+
+.calculator .zero_zero::before
+{
+    background: linear-gradient(90deg, #617086,#ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4; 
+}
+
+.calculator .dot
+{
+    background: rgb(57, 63, 72);
+
+}
+
+.calculator .dot::before
+{
+    background: linear-gradient(90deg, #617086,#ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4; 
+}
+
+.calculator .minus
+{
+    background: rgb(255, 157, 0);
+}
+
+.calculator .minus::before
+{
+    background: linear-gradient(90deg, #ffb637,#ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4; 
+} 
+
+.calculator .multiplication
+{
+    background: rgb(255, 157, 0);
+}
+
+.calculator .multiplication::before
+{
+    background: linear-gradient(90deg, #ffb637,#ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4; 
+} 
+
+.calculator .division
+{
+    background: rgb(255, 157, 0);
+}
+
+.calculator .division::before
+{
+    background: linear-gradient(90deg, #ffb637,#ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4; 
+} 
